@@ -41,7 +41,7 @@ namespace hummingbird {
     /**
      * Sets an LED on ports 1 to 4 to a brightness value from 0 to 100
      * @param port the LED port to control [1-4]
-     * @param brightness the % brightness to set the LED to [0-100]
+     * @param brightness the % brightness of the LED [0-100]
      */
     //% weight=30 blockId="setLEDs" block="Set LED port %port_num| to %brightness |%"
     //%port_num.min=1 port_num.max=4
@@ -72,7 +72,13 @@ namespace hummingbird {
             readyToSend = true
         }
     }
-
+    /**
+     * Sets a Tri-color LED on ports 1 or 2 to the color specified by red, green, and blue brightness values. The values range from 0 to 100
+     * @param port the LED port to control [1-2]
+     * @param red_brightness the % brightness of the red LED element [0-100]
+     * @param green_brightness the % brightness of the green LED element [0-100]
+     * @param blue_brightness the % brightness of the blue LED element [0-100]
+     */
     //% weight=29 blockId="setTriColorLEDs" block="Set Tri-LED port %port_num| with Red: %Red| Green: %Green | Blue: %Blue"
     //%port_num.min=1 port_num.max=2
     //% Red.min=0 Red.max=100
@@ -117,7 +123,11 @@ namespace hummingbird {
         }
     }
 
-
+    /**
+     * Sets a servo on ports 1 to 4 to an angle from 0 to 180 degrees
+     * @param port the servo port to control [1-4]
+     * @param angle the angle in degrees for the servo [0-180]
+     */
     //% weight=28 blockId="setServos" block="Set Servo port %port_num| to %angle |degrees"
     //%port_num.min=1 port_num.max=4
     //% angle.min=0 angle.max=180
@@ -147,6 +157,11 @@ namespace hummingbird {
         }
     }
 
+    /**
+     * Sets a motor on ports 1 or 2 to a speed from -100 to 100
+     * @param port the motor port to control [1-2]
+     * @param speed the speed of the motor [-100-100]
+     */
     //% weight=27 blockId="setMotors" block="Set Motor port %port_num| to %speed |speed"
     //%port_num.min=1 port_num.max=2
     //% speed.min=-100 speed.max=100
@@ -183,6 +198,11 @@ namespace hummingbird {
         }
     }
 
+    /**
+     * Sets a vibration motor on ports 1 or 2 to an intensity from 0 to 100
+     * @param port the vibration motor port to control [1-2]
+     * @param speed the intensity of vibration [0-100]
+     */
     //% weight=26 blockId="setVibration" block="Set Vibration Motor port %port_num| to %intensity |%"
     //%port_num.min=1 port_num.max=2
     //% intensity.min=0 intensity.max=100
@@ -212,6 +232,10 @@ namespace hummingbird {
         }
     }
 
+    /**
+     * Reads the value of the sensor on ports 1 to 4. Readings range from 0 to 100 and linearly correspond to a voltage from 0 to 5 volts on the sensor port
+     * @param port the sensor port to read [1-4]
+     */
     //% weight=20 blockId="getSensors" block="Get Sensor on port %port_num"
     //%port_num.min=1 port_num.max=4
     export function getSensor(port: FourPort): number {
