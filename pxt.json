@@ -1,0 +1,20 @@
+{
+    "name": "hummingbird",
+    "version": "0.0.0",
+    "description": "Library for using Hummingbird Duo with Micro:bit",
+    "license": "MIT",
+    "authors":"Tom Lauwers",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "hummingbird.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "icon":"icon.png"
+}
