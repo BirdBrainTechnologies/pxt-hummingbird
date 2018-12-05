@@ -259,7 +259,7 @@ namespace hummingbird {
             return_val = (readBuff.getNumber(NumberFormat.UInt8LE, 0) * 100) / 255
 
 
-            return return_val
+            return Math.round(return_val)
         }
         else {
             return 0
