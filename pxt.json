@@ -1,6 +1,6 @@
 {
     "name": "hummingbird",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Library for using Hummingbird Duo with Micro:bit",
     "license": "MIT",
     "authors": "Tom Lauwers",
