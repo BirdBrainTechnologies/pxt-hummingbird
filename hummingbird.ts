@@ -1,12 +1,12 @@
 enum FourPort {
     //% block="One"
-    One=1,
+    One = 1,
     //% block="Two"
-    Two=2,
+    Two = 2,
     //% block="Three"
-    Three=3,
+    Three = 3,
     //% block="Four"
-    Four=4
+    Four = 4
 }
 
 enum TwoPort {
@@ -67,7 +67,7 @@ namespace hummingbird {
             cmdBuff.setNumber(NumberFormat.UInt8LE, 1, port_ascii)
             cmdBuff.setNumber(NumberFormat.UInt8LE, 2, intensity)
             while (!readyToSend); // Wait for other functions in other threads
-            readyToSend=false
+            readyToSend = false
             serial.writeBuffer(cmdBuff)
             readyToSend = true
         }
@@ -258,6 +258,7 @@ namespace hummingbird {
             readyToSend = true
             return_val = (readBuff.getNumber(NumberFormat.UInt8LE, 0) * 100) / 255
 
+            basic.pause(1)      // Pause added 1/21/20 to eliminate error
 
             return Math.round(return_val)
         }

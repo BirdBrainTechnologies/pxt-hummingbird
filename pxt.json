@@ -16,5 +16,6 @@
         "test.ts"
     ],
     "public": true,
-    "icon": "icon.png"
+    "icon": "icon.png",
+    "preferredEditor": "tsprj"
 }
